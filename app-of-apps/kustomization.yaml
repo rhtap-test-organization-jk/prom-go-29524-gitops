@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: prom-go-29524 
+  janus-idp.io/tekton: prom-go-29524
+  backstage.io/kubernetes-id: prom-go-29524
+  backstage.io/kubernetes-namespace: rhtap-test-organization-jk 
+  app.kubernetes.io/part-of: prom-go-29524
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
